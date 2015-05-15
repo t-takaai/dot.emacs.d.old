@@ -388,3 +388,42 @@
    ;; 古いバックアップファイルの削除
 ;   (setq delete-old-versions t)
 
+
+
+;;----------------------------------------------------------------
+;; #cua-mode
+;; 矩形編集
+(cua-mode t)
+(setq cua-enable-cua-keys nil) ;; 変なキーバインド禁止
+
+
+
+;;----------------------------------------------------------------
+;; hippie-expand
+;;
+;;; hippie-expand
+(global-set-key "\C-o" 'hippie-expand)
+(setq hippie-expand-try-functions-list
+      '(yas/hippie-try-expand
+        try-expand-dabbrev
+        try-expand-dabbrev-all-buffers
+        try-expand-dabbrev-from-kill
+        try-complete-file-name-partially
+        try-complete-file-name
+        try-expand-all-abbrevs
+        try-expand-list try-expand-line
+        try-complete-lisp-symbol-partially
+        try-complete-lisp-symbol))
+
+
+;;----------------------------------------------------------------
+;; EmacsからDictionary.appを起動する方法Add Star
+;; http://d.hatena.ne.jp/tunefs/20130212/p1
+;;
+(global-set-key
+ "\C-\M-d" 
+ (lambda ()
+   (interactive)
+   (let ((url (concat "dict://" (read-from-minibuffer "" (current-word)))))
+     (browse-url url))))
+

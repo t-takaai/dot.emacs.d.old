@@ -1,7 +1,6 @@
 
 ;;----------------------------------------------------------------
 ;; #dash-at-point
-;;
 ;;  https://github.com/stanaka/dash-at-point 
 ;;
 (autoload 'dash-at-point "dash-at-point"
@@ -20,20 +19,6 @@
 ;; *で囲まれたバッファ名は対象外にする
 (setq uniquify-ignore-buffers-re "*[^*]+*")
 
-
-
-;;----------------------------------------------------------------
-;; #cua-mode
-;;
-(cua-mode t)
-(setq cua-enable-cua-keys nil) ;; 変なキーバインド禁止
-
-
-;;----------------------------------------------------------------
-;; #sticky
-;;
-;(require 'sticky)
-;(use-sticky-key ";" sticky-alist:en)
 
 
 ;;----------------------------------------------------------------
@@ -102,34 +87,6 @@
 (setq edit-server-new-frame nil)
 
 
-
-;;----------------------------------------------------------------
-;; hippie-expand
-;;
-;;; hippie-expand
-(global-set-key "\C-o" 'hippie-expand)
-(setq hippie-expand-try-functions-list
-      '(yas/hippie-try-expand
-        try-expand-dabbrev
-        try-expand-dabbrev-all-buffers
-        try-expand-dabbrev-from-kill
-        try-complete-file-name-partially
-        try-complete-file-name
-        try-expand-all-abbrevs
-        try-expand-list try-expand-line
-        try-complete-lisp-symbol-partially
-        try-complete-lisp-symbol))
-
-
-
-;;----------------------------------------------------------------
-;; key-chord
-;;
-(require 'key-chord)
-(setq key-chord-two-keys-delay 0.04)
-(key-chord-mode 1)
-;;同時押しでview-modeをトグル
-(key-chord-define-global "jk" 'view-mode)
 
 
 ;;----------------------------------------------------------------
@@ -253,18 +210,6 @@
 
 ;; transient-mark-modeが nilでは動作しませんので注意
 (transient-mark-mode t)
-
-
-;;----------------------------------------------------------------
-;; EmacsからDictionary.appを起動する方法Add Star
-;; http://d.hatena.ne.jp/tunefs/20130212/p1
-;;
-(global-set-key
- "\C-\M-d" 
- (lambda ()
-   (interactive)
-   (let ((url (concat "dict://" (read-from-minibuffer "" (current-word)))))
-     (browse-url url))))
 
 
 ;;----------------------------------------------------------------
