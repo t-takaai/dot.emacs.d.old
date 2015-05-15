@@ -12,12 +12,6 @@
 
 
 ;;----------------------------------------------------------------
-;; #magit
-;;
-(require 'magit)
-
-
-;;----------------------------------------------------------------
 ;; #uniqify
 ;;
 (require 'uniquify)
@@ -26,16 +20,6 @@
 ;; *で囲まれたバッファ名は対象外にする
 (setq uniquify-ignore-buffers-re "*[^*]+*")
 
-
-;;----------------------------------------------------------------
-;; #recentf
-;;
-;; preserv recent 2000 files
-(setq recentf-max-saved-items 2000)
-;; exclueded regular expression
-(setq recentf-exclude '("/TAGS$" "/var/tmp/"))
-(require 'recentf-ext)
-(global-set-key "\C-xp" 'recentf-open-files)
 
 
 ;;----------------------------------------------------------------
@@ -74,18 +58,6 @@
 ;;
 ;(require 'google-maps)
 
-
-;;----------------------------------------------------------------
-;; #scala-mode2
-;;
-(require 'scala-mode2)
-
-
-;;----------------------------------------------------------------
-;; #ENSIME
-;;
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 
 ;;----------------------------------------------------------------
@@ -161,15 +133,6 @@
 
 
 ;;----------------------------------------------------------------
-;; undo-tree
-;;
-(require 'undo-tree)
-(global-undo-tree-mode t)
-(global-set-key (kbd "M-/") 'undo-tree-redo)
-
-
-
-;;----------------------------------------------------------------
 ;; nav
 ;;
 ;; (require 'nav)
@@ -201,55 +164,6 @@
 (setq popwin:popup-window-position 'bottom)
 (push '("*YaTeX-typesetting*") popwin:special-display-config)
 (push '("helm" :regexp t :height 0.4) popwin:special-display-config)
-
-
-
-;;----------------------------------------------------------------
-;; pdf-tools
-;; "The epdfinfo server quit, restart it?" と言われて機能せず
-
-;(pdf-tools-install)
-
-;(require 'pdf-tools)
-;(require 'pdf-annot) 
-;(require 'pdf-history) 
-;(require 'pdf-info) 
-;(require 'pdf-isearch) 
-;(require 'pdf-links) 
-;(require 'pdf-misc) 
-;(require 'pdf-occur) 
-;(require 'pdf-outline) 
-;(require 'pdf-render) 
-;(require 'pdf-sync) 
-;(require 'tablist-filter)
-;(require 'tablist)
-
-
-;; ;;----------------------------------------------------------------
-;; ;; direx
-;; ;; http://cx4a.blogspot.jp/2011/12/popwineldirexel.html
-;; ;;
-;; (require 'direx)
-
-;; ;; direx:direx-modeのバッファをウィンドウ左辺に幅25でポップアップ
-;; ;; :dedicatedにtを指定することで、direxウィンドウ内でのバッファの切り替えが
-;; ;; ポップアップ前のウィンドウに移譲される
-;; (push '(direx:direx-mode :position left :width 25 :dedicated t)
-;;       popwin:special-display-config)
-
-;; ;(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
-;; (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
-
-;;----------------------------------------------------------------
-;; direx-grep
-;; https://github.com/aki2o/direx-grep/blob/master/README.md
-;; 不安定で使用中止中
-;; (require 'direx-grep)
-;; (define-key direx:direx-mode-map (kbd "s") 'direx-grep:grep-item)
-;; (define-key direx:direx-mode-map (kbd "S") 'direx-grep:grep-item-from-root)
-;; (define-key direx:direx-mode-map (kbd "a") 'direx-grep:show-all-item-at-point)
-;; (define-key direx:direx-mode-map (kbd "A") 'direx-grep:show-all-item)
-
 
 
 
@@ -302,6 +216,8 @@
 ;;----------------------------------------------------------------
 ;; # jumar (https://github.com/kenoss/jumar) 
 ;; http://qiita.com/kenoss/items/0617b0c2f04343d4477c
+;; https://github.com/kenoss/jumar
+
 (require 'jumar)
 (require 'jumar-dwin)
 (require 'helm)  ; if you use visualizer.
