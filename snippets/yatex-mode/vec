@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: vec
+# key: ve
+# binding: direct-keybinding
+# --
+\Vec{${1:$$(upcase yas/text)}}$0

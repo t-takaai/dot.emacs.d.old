@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: testmondai
+# key: te
+# binding: direct-keybinding
+# --
+\testmondai{}
+$0
+\newpage

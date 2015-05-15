@@ -1,0 +1,5 @@
+# contributor: 
+# name: mathrm
+# key: rm
+# --
+\mathrm{${1:$$(upcase yas/text)}}$0

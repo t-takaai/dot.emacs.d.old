@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ea
+# key: ea
+# binding: direct-keybinding
+# --
+(x - $1)^2 + (y - $2)^2 = $0

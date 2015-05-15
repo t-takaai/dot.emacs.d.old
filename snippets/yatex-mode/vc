@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: vc
+# key: vc
+# binding: direct-keybinding
+# --
+\vec{$1}$0

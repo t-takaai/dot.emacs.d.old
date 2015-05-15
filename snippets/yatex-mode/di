@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: di
+# key: di
+# binding: direct-keybinding
+# --
+\int_$1^$2 $0

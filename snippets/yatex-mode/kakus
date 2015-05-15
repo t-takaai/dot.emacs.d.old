@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: kakus
+# key: ks
+# binding: direct-keybinding
+# --
+\kakus{　　}

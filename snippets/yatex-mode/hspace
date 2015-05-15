@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: hspace
+# key: hs
+# binding: direct-keybinding
+# --
+\hspace{$1zw}$0

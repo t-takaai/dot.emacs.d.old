@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: therefore
+# key: yu
+# binding: direct-keybinding
+# --
+\therefore $0

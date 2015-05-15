@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: futowaku
+# key: fu
+# binding: direct-keybinding
+# --
+\futowaku{$1}$0

@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: create table ...
+# key: cr
+# binding: direct-keybinding
+# --
+CREATE TABLE $1 (
+  id INTEGR PRIMARY KEY,
+  $2
+);
+$0

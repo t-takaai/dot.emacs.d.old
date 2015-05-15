@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mdftestmondai
+# key: mdt
+# binding: direct-keybinding
+# --
+\mdfinput[testmondai]{$1}
+\newpage
+$0

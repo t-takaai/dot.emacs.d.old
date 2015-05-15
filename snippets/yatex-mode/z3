@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: z3
+# key: z3
+# binding: direct-keybinding
+# --
+z^3$0

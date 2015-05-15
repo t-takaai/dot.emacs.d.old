@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: eo
+# key: eo
+# binding: direct-keybinding
+# --
+x^2 + y^2 = $0

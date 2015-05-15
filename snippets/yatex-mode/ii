@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ii
+# key: ii
+# binding: direct-keybinding
+# --
+\int $1

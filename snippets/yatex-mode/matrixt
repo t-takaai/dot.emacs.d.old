@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: matrixt
+# key: mt
+# binding: direct-keybinding
+# --
+\matrixt{$1}{$2}$0

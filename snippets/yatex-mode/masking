@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: masking
+# key: ma
+# binding: direct-keybinding
+# --
+\masking{$1}$0

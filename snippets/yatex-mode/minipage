@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: minipage
+# key: mi
+# binding: direct-keybinding
+# --
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{0zw}
+$1
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0zw}
+ \begin{center}
+  \includegraphics[width=0.7\textwidth]{$2}   
+ \end{center}
+\end{minipage}
+$0

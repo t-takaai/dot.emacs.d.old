@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: cdots
+# key: cd
+# binding: direct-keybinding
+# --
+\cdots $0

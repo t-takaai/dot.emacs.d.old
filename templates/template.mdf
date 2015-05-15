@@ -1,0 +1,23 @@
+%<subject>	Math
+%<field>	0-0
+%<level>	B
+%<label>
+%<+history>
+%  Created : %date%
+%  Last Updated : 2015/01/09 (Fri) 12:54:49 JST by Takayuki Takaai
+%</history>
+%<*mdftitle>
+\mdftitle{}
+%</mdftitle>
+%<*mdfref>
+\mdfref{}%
+%</mdfref>
+%<*mdfproblem>
+\mdfproblem{
+}
+%</mdfproblem>
+%<*mdfanswer>
+\mdfanswer{
+
+}
+%</mdfanswer>

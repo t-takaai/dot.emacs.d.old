@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mdfmondai
+# key: mdm
+# binding: direct-keybinding
+# --
+\mdfinput[mondai]{$1}$0

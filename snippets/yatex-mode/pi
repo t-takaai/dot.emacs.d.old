@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pi
+# key: pi
+# binding: direct-keybinding
+# --
+\pi

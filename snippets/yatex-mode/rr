@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: rr
+# key: rr
+# binding: direct-keybinding
+# --
+r^2$0

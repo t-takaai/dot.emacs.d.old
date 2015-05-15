@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: sin
+# key: si
+# binding: direct-keybinding
+# --
+\sin $0

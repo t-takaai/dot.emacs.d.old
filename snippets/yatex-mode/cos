@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: cos
+# key: co
+# binding: direct-keybinding
+# --
+\cos $0

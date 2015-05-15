@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: overline
+# key: ov
+# binding: direct-keybinding
+# --
+\overline{$1}$0

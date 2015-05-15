@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mdl
+# key: mdl
+# binding: direct-keybinding
+# --
+\mdftitle{大学への数学20$1日々の演習$2}$0

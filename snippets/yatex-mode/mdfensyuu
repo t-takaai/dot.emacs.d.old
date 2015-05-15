@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mdfensyuu
+# key: mde
+# binding: direct-keybinding
+# --
+\mdfinput[ensyuu]{$1}$0

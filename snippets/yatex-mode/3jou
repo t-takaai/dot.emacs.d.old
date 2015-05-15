@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: 3jou
+# key: 3j
+# binding: direct-keybinding
+# --
+^3$0

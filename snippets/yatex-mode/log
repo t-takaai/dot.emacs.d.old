@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: log
+# key: lo
+# binding: direct-keybinding
+# --
+\log_{$1} $0
