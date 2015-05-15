@@ -125,6 +125,48 @@
 (defun shell-command-sequence (cmd &rest others)
   (mapc 'shell-command `(,cmd ,@others)))
 
+;; mdfファイルのコンパイル
+
+;; 以下のスクリプトを"mdftest"という名前でPATHの通ったディレクトリに置く
+
+;;----------------------------------------------------------------
+
+;; #! /bin/zsh
+;; name_ext=$1
+;; name="${name_ext%.*}"
+;; echo '\\documentclass[11pt]{jreport}
+;; \\usepackage[T1]{fontenc}
+;; \\usepackage{lmodern}
+;; \\usepackage[deluxe]{otf}
+;; %\\usepackage[dvipdfmx]{graphicx}			%	pdf にする場合
+;; %\\usepackage[dvipdfmx,dvipsnames]{xcolor}	%	pdf にする場合
+;; \\usepackage[dvipdfmx]{color,graphicx}
+;; \\usepackage{amsmath}
+;; \\usepackage{mebiolabo20140801}
+;; %\\usepackage{mebio}
+
+;; \\用紙サイズ{A4}
+;; \\印刷形式{ts}
+
+;; \\begin{document}
+;; \\everymath{\displaystyle}
+
+;; \\showmdftitle
+;; \\showmdfref
+
+;; \\mdfinput[testmondai]{'$1'}
+
+;; \\end{document}' > $name.tex
+
+;; # platex tmp.tex
+;; # open tmp.dvi
+
+;; latexmk -pvc $name.tex &
+
+;;----------------------------------------------------------------
+
+
+
 (defun mdf-typeset-and-preview ()
   (interactive)
   (let* ((f (buffer-file-name))
