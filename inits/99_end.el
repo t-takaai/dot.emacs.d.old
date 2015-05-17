@@ -46,29 +46,6 @@
 
 
 ;;----------------------------------------------------------------
-;; #mew
-;;
-(autoload 'mew "mew" nil t)
-(autoload 'mew-send "mew" nil t)
-;(setq mew-fcc "+outbox") ; 送信メールを保存
- 
-;; Optional setup (Read Mail menu):
-(setq read-mail-command 'mew)
- 
-;; Optional setup (e.g. C-xm for sending a message):
-(autoload 'mew-user-agent-compose "mew" nil t)
-(if (boundp 'mail-user-agent)
-    (setq mail-user-agent 'mew-user-agent))
-(if (fboundp 'define-mail-user-agent)
-    (define-mail-user-agent
-      'mew-user-agent
-      'mew-user-agent-compose
-      'mew-draft-send-message
-      'mew-draft-kill
-      'mew-send-hook))
-
-
-;;----------------------------------------------------------------
 ;; #jabber
 ;;
 (require 'jabber)
@@ -111,19 +88,7 @@
 ;;             (nav-toggle-hidden-files)
 ;;             ))
 
-
-;;----------------------------------------------------------------
-;; popwin
-;; http://d.hatena.ne.jp/m2ym/20110120/1295524932
-;;
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-(setq popwin:popup-window-position 'bottom)
-(push '("*YaTeX-typesetting*") popwin:special-display-config)
-(push '("helm" :regexp t :height 0.4) popwin:special-display-config)
-
-
-
+ 
 ;;----------------------------------------------------------------
 ;; smart-compile
 ;; http://ka-zoo.net/2013/03/smartcompile-emacs%E3%81%8B%E3%82%89ruby%E3%82%92%E7%9B%B4%E6%8E%A5%E5%AE%9F%E8%A1%8C/
@@ -169,35 +134,6 @@
 ;;      (php-eldoc-probe-load "http://localhost/otherproject/probe.php?secret=sesame"))))
 ;; (add-hook 'php-mode-hook 'php-mode-options)
 
-
-;;----------------------------------------------------------------
-;; # jumar (https://github.com/kenoss/jumar) 
-;; http://qiita.com/kenoss/items/0617b0c2f04343d4477c
-;; https://github.com/kenoss/jumar
-
-(require 'jumar)
-(require 'jumar-dwin)
-(require 'helm)  ; if you use visualizer.
-
-;; If one needs highlight the line after jump.
-(require 'erfi-emacs)
-(add-hook 'jumar-post-jump-hook 'erfi-emacs-hl-turn-on-until-next-command)
-
-;; Initialization
-(jumar-dwin-use-preconfigured-scheme 'list+history)
-(jumar-init)
-
-;; As you like.
-(define-key global-map (kbd "C-'")     'jumar-dwin-add-marker)
-(define-key global-map (kbd "C-\"")    'jumar-dwin-jump-current)
-(define-key global-map (kbd "C-,")     'jumar-dwin-jump-backward)
-(define-key global-map (kbd "C-.")     'jumar-dwin-jump-forward)
-(define-key global-map (kbd "C-x C-'") 'helm-jumar-dwin-jumarkers)
-
-;; As you need.  Advise jump commands, like `find-tag' and `gtags-find-tag',
-;; to add jumarker before/after jump.
-(jumar-dwin-advise-jump-command-to-add-jumarker 'find-tag)
-; (jumar-dwin-advise-jump-command-to-add-jumarker 'elisp-slime-nav-find-elisp-thing-at-point)
 
 
 ;;----------------------------------------------------------------
