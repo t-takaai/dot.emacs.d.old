@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: kakum
-# key: km
+# name: cdot
+# key: cd
 # binding: direct-keybinding
 # --
-\kakum{　}$0
+\cdot $0

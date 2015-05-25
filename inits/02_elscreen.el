@@ -37,6 +37,7 @@
     (define-key elscreen-map "\C-z" 'iconify-or-deiconify-frame)
   (define-key elscreen-map "\C-z" 'suspend-emacs))
 
+
 ;; ;; 以下は自動でスクリーンを生成する場合の設定
 ;; (defmacro elscreen-create-automatically (ad-do-it)
 ;;   `(if (not (elscreen-one-screen-p))
@@ -59,8 +60,8 @@
 
 ;; (global-set-key (kbd "C-z C-c") 'elscreen-clone) ; 今のウインドウを基に作成
 ;; (global-set-key (kbd "C-z C-k") 'elscreen-kill-screen-and-buffers) ; スクリーンとバッファをkill
-;; (global-set-key [(C-tab)] 'elscreen-next) ; ブラウザみたいに
-;; (global-set-key [(C-S-tab)] 'elscreen-previous) ; ブラウザみたいに　その2
+(global-set-key [(C-tab)] 'elscreen-next) ; ブラウザみたいに
+(global-set-key [(C-S-tab)] 'elscreen-previous) ; ブラウザみたいに　その2
 
 ;; ;; elscreen-server
 ;; (require 'elscreen-server)

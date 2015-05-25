@@ -4,7 +4,7 @@
 .cask/
 .git
 
-history
+history*
 
 ac-comphist.dat
 ac-user-dict/
@@ -16,7 +16,6 @@ bookmarks
 !/ddskk/init
 
 google/
-history
 
 js/
 saved-places

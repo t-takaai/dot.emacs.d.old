@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: kakum
-# key: km
+# name: angle
+# key: an
 # binding: direct-keybinding
 # --
-\kakum{　}$0
+\angle\mathrm{${1:$$(upcase yas/text)}}$0

@@ -2,11 +2,25 @@
 ;;----------------------------------------------------------------
 ;; #misc
 ;;
+
 ;; バックアップファイルの置き場所を指定する
-;(setq make-backup-files t)
-;(setq backup-directory-alist
-;      (cons (cons "\\.*$" (expand-file-name "~/bak"))
-;            backup-directory-alist))
+;; http://exlight.net/devel/emacs/backup_file/
+;; (defun make-backup-file-name (filename)
+;;   (concat "~/.bak/" (file-name-nondirectory filename)))
+
+(setq make-backup-files t)
+(setq backup-directory "~/.backup")
+(if (and (boundp 'backup-directory)
+         (not (fboundp 'make-backup-file-name-original)))
+    (progn
+      (fset 'make-backup-file-name-original
+            (symbol-function 'make-backup-file-name))
+      (defun make-backup-file-name (filename)
+        (if (and (file-exists-p (expand-file-name backup-directory))
+                 (file-directory-p (expand-file-name backup-directory)))
+            (concat (expand-file-name backup-directory) 
+                    "/" (file-name-nondirectory filename))
+          (make-backup-file-name-original filename)))))
 
 ;;; 右から左に読む言語に対応させないことで描画高速化
 (setq-default bidi-display-reordering nil)
