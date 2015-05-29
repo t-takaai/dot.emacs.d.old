@@ -441,3 +441,9 @@
    (let ((url (concat "dict://" (read-from-minibuffer "" (current-word)))))
      (browse-url url))))
 
+
+;; stash.el
+;; 永続化したい変数を宣言する
+;;; (or stashed 'nil)は読み込み時にデフォルトでnilにするおまじない
+(defstash kill-ring "kill-ring.el" nil (or stashed 'nil))
+;(defstash minibuffer-history "minibuffer-history.el" nil (or stashed 'nil))
