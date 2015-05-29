@@ -27,7 +27,7 @@
     (setq ls-lisp-dirs-first t)
     (setq dired-recursive-copies 'always)
     (setq dired-recursive-deletes 'always)
-    (put 'dired-find-alternate-file 'disabled nil);新規バッファを作成しない
+;    (put 'dired-find-alternate-file 'disabled nil);新規バッファを作成しない
     ))
 
 ;これを設定しておくと、ウィンドウを分割して左右にdiredバッファを開いているとき、

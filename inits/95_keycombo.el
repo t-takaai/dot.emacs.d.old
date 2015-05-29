@@ -12,6 +12,10 @@
   '(lambda ()
      (key-combo-mode t)))
 
+(add-hook 'coffee-mode-hook
+  '(lambda ()
+     (key-combo-mode t)))
+
 (add-hook 'ruby-mode-hook
   '(lambda ()
      (key-combo-mode t)))
@@ -98,6 +102,7 @@
 
 (setq key-combo-js-mode-hooks
       '(js2-mode-hook
+        coffee-mode-hook
 	))
 
 (setq key-combo-js-default
