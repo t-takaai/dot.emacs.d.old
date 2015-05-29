@@ -180,3 +180,9 @@
 ;; ;; elscreen-dired
 ;; (require 'elscreen-dired)
 
+
+;; elscreen-persist.el
+;; (elscreen-persist-mode 1)
+
+;; elscreen-separate-buffer.el
+(elscreen-separate-buffer-list-mode 1)

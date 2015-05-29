@@ -21,7 +21,13 @@
 
 ;; emacsでls does not support –dired; see `dired-use-ls-dired’ for more details.と出たときの対処方法
 ;; # http://niku.name/articles/2013/04/30/emacs%E3%81%A7ls%20does%20not%20support%20--dired;%20see%20%60dired-use-ls-dired%27%20for%20more%20details.%E3%81%A8%E5%87%BA%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95
-;(setq dired-use-ls-dired t)
+(setq dired-use-ls-dired t)
+
+;; Listing directory failed but access-file worked エラーの解消
+;;http://d.hatena.ne.jp/billest/20100930/1285809840
+(when (eq system-type 'darwin)
+  (require 'ls-lisp)
+  (setq ls-lisp-use-insert-directory-program nil))
 
 
 ;;----------------------------------------------------------------

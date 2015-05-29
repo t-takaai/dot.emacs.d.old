@@ -37,28 +37,28 @@
 ;(define-key dired-mode-map " " 'dired-do-shell-command)
 
 ;; http://kouzuka.blogspot.jp/2011/02/emacs-dired-quick-look.html
-(defun my-quicklook-at-point ()
-  "Preview a file at point with Quick Look."
-  (interactive)
-  (require 'ffap)
-  (let ((url (ffap-url-at-point))
-        (file (ffap-file-at-point))
-        (process (get-process "qlmanage_ps")))
-    (when url
-      (if (string-match "\\`file://\\(.*\\)\\'" url)
-          (setq file (match-string 1 url))
-        (setq file nil)))
-    (when (or (not (stringp file))
-              (not (file-exists-p (setq file (expand-file-name file)))))
-      (when process
-        (kill-process process))
-      (error "No file found"))
-    (if process
-        (kill-process process)
-      (message "Quick Look: %s" file)
-      (start-process "qlmanage_ps" nil "qlmanage" "-p" file))))
+;; (defun my-quicklook-at-point ()
+;;   "Preview a file at point with Quick Look."
+;;   (interactive)
+;;   (require 'ffap)
+;;   (let ((url (ffap-url-at-point))
+;;         (file (ffap-file-at-point))
+;;         (process (get-process "qlmanage_ps")))
+;;     (when url
+;;       (if (string-match "\\`file://\\(.*\\)\\'" url)
+;;           (setq file (match-string 1 url))
+;;         (setq file nil)))
+;;     (when (or (not (stringp file))
+;;               (not (file-exists-p (setq file (expand-file-name file)))))
+;;       (when process
+;;         (kill-process process))
+;;       (error "No file found"))
+;;     (if process
+;;         (kill-process process)
+;;       (message "Quick Look: %s" file)
+;;       (start-process "qlmanage_ps" nil "qlmanage" "-p" file))))
 
-(global-set-key "\C-cy" 'my-quicklook-at-point)
+;; (global-set-key "\C-cy" 'my-quicklook-at-point)
 
 (defun my-dired-do-quicklook ()
   "In dired, preview with Quick Look."
