@@ -447,3 +447,19 @@
 ;;; (or stashed 'nil)は読み込み時にデフォルトでnilにするおまじない
 (defstash kill-ring "kill-ring.el" nil (or stashed 'nil))
 ;(defstash minibuffer-history "minibuffer-history.el" nil (or stashed 'nil))
+
+;; emacsで編集中のファイルをデフォルトブラウザで開く
+;; http://blog.shibayu36.org/entry/2012/12/15/224627
+;; default-browser
+;; http://www.leancrew.com/all-this/2012/04/default-browser-script/ あたりから、default browserを取得するスクリプトを持ってくる。~/bin/辺りに置く。
+
+(defun browse-current-file ()
+  (interactive)
+  (let ((data-url
+         (concat "file://" (buffer-file-name)))
+        (default-browser
+          (replace-regexp-in-string "[\n\r]+$" ""
+            (shell-command-to-string (expand-file-name "~/bin/default-browser")))))
+    (shell-command (concat "open -b " default-browser " " data-url))))
+
+(global-set-key (kbd "C-|") 'browse-current-file)
