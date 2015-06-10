@@ -307,10 +307,11 @@
 (add-hook 'yatex-mode-hook
          '(lambda ()
          (YaTeX-define-key "\C-v" 'latex-math-preview-expression) ;数式、選択領域のプレビュ
-         (YaTeX-define-key "\C-p" 'latex-math-preview-save-image-file) ;数式、選択領域から画像を作成して保存
-         (YaTeX-define-key "j" 'latex-math-preview-insert-symbol) ;記号の一覧、挿入
-         (YaTeX-define-key "\C-j" 'latex-math-preview-last-symbol-again) ;直前の記号の再挿入
-         (YaTeX-define-key "\C-b" 'latex-math-preview-beamer-frame))) ;beamer の frame のプレビュ
+         ;; (YaTeX-define-key "\C-p" 'latex-math-preview-save-image-file) ;数式、選択領域から画像を作成して保存
+         ;; (YaTeX-define-key "j" 'latex-math-preview-insert-symbol) ;記号の一覧、挿入
+         ;; (YaTeX-define-key "\C-j" 'latex-math-preview-last-symbol-again) ;直前の記号の再挿入
+         ;; (YaTeX-define-key "\C-b" 'latex-math-preview-beamer-frame);beamer の frame のプレビュ
+         ))
 (setq latex-math-preview-in-math-mode-p-func 'YaTeX-in-math-mode-p)
 
 (setq latex-math-preview-tex-to-png-for-preview '(platex dvipng))

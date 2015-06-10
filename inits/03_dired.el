@@ -171,3 +171,12 @@
 (define-key dired-mode-map (kbd "<tab>") 'dired-subtree-remove)
 ;;; C-x n nでsubtreeにナローイング
 (define-key dired-mode-map (kbd "C-x n n") 'dired-subtree-narrow)
+
+
+;;----------------------------------------------------------------
+;; dired-filter.el
+
+;; dired-modeでonにする
+(defun dired-mode-hooks()
+	(dired-filter-mode))
+(add-hook 'dired-mode-hook 'dired-mode-hooks)
