@@ -174,7 +174,9 @@
 
 
 ;;----------------------------------------------------------------
-;; dired-filter.el
+;; # dired-filter.el
+;; http://rubikitch.com/2015/04/07/dired-filter/
+;; http://qiita.com/ballforest/items/0ddbdfeaa9749647b488
 
 ;; dired-modeでonにする
 (defun dired-mode-hooks()
