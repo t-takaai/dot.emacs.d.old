@@ -463,3 +463,22 @@
     (shell-command (concat "open -b " default-browser " " data-url))))
 
 (global-set-key (kbd "C-|") 'browse-current-file)
+
+
+;; タイトルバーにファイルのフルパス表示
+(setq frame-title-format
+      (format "%%f - Emacs@%s" (system-name)))
+
+;; フレームの透明度
+(set-frame-parameter (selected-frame) 'alpha '(0.9))
+
+
+
+
+
+
+
+
+
+
+
