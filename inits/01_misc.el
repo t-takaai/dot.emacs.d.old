@@ -407,6 +407,8 @@
 ;;----------------------------------------------------------------
 ;; #cua-mode
 ;; 矩形編集
+;; C-Ret で矩形選択
+;; 詳しいキーバインド操作：http://dev.ariel-networks.com/articles/emacs/part5/
 (cua-mode t)
 (setq cua-enable-cua-keys nil) ;; 変なキーバインド禁止
 
@@ -471,8 +473,6 @@
 
 ;; フレームの透明度
 (set-frame-parameter (selected-frame) 'alpha '(0.9))
-
-
 
 
 
