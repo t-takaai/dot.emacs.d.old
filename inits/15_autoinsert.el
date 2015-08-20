@@ -16,6 +16,7 @@
 	       ("\\.mdf$"   . ["template.mdf" my-template])
 	       ("\\.tex$"   . ["template.tex" my-template])
 	       ("\\.html$"   . ["template.html" my-template])
+	       ("\\.php$"   . ["template.php" my-template])
                ) auto-insert-alist))
 (add-hook 'find-file-hooks 'auto-insert)
 (require 'cl)
