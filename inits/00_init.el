@@ -13,7 +13,7 @@
  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
      (normal-top-level-add-subdirs-to-load-path)))
 
-(add-to-list 'load-path "/usr/local/Cellar/pdf-tools/0.20/elpa")
+(add-to-list 'load-path "/usr/local/Cellar/pdf-tools/0.60/elpa")
 
 
 ;;----------------------------------------------------------------
@@ -49,8 +49,6 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 ;; インストールしたパッケージにロードパスを通してロードする
 (package-initialize)
-;; exec-path-from-shel
-(exec-path-from-shell-initialize)
 
 
 
@@ -69,12 +67,12 @@
 ;;
 ;; より下に記述した物が PATH の先頭に追加されます
 (dolist (dir (list
-              "/sbin"
+              "/usr/local/bin"
+              "/opt/local/bin"
+              "/usr/bin"
               "/usr/sbin"
               "/bin"
-              "/usr/bin"
-              "/opt/local/bin"
-              "/usr/local/bin"
+              "/sbin"
               (expand-file-name "~/bin")
               (expand-file-name "~/.emacs.d/bin")
               ))

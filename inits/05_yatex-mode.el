@@ -103,6 +103,7 @@
 
 ;; latexmk
 ;(setq tex-command "latexmk -pv -pdf")
+;(setq tex-command "TEXINPUTS=.:/Users/takaai/mebio/Data//:/Users/takaai/mebio/MyData//:/Users/takaai/mebio/Chokuzen//: latexmk -pvc")
 (setq tex-command "latexmk -pvc")
 
 

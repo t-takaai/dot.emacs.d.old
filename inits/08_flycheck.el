@@ -1,4 +1,3 @@
-
 
 ;;----------------------------------------------------------------
 ;; #flycheck
@@ -9,7 +8,7 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)  ;; Python
-;(add-hook 'ruby-mode-hook 'flycheck-mode)    ;; Ruby
+(add-hook 'ruby-mode-hook 'flycheck-mode)    ;; Ruby
 (add-hook 'yatex-mode-hook 'flycheck-mode)   ;; LaTeX
 (add-hook 'js2-mode-hook 'flycheck-mode)     ;; JavaScript
 (add-hook 'coffee-mode-hook
@@ -40,3 +39,22 @@
   '(custom-set-variables
    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
 
+
+;;
+;; http://qiita.com/watson1978/items/debafdfc49511fb173e9
+
+ (flycheck-define-checker ruby-rubocop
+  "A Ruby syntax and style checker using the RuboCop tool.
+
+See URL `http://batsov.com/rubocop/'."
+  :command ("rubocop" "--format" "emacs" "--silent"
+            (config-file "--config" flycheck-rubocoprc)
+            source)
+  :error-patterns
+  ((warning line-start
+            (file-name) ":" line ":" column ": " (or "C" "W") ": " (message)
+            line-end)
+   (error line-start
+          (file-name) ":" line ":" column ": " (or "E" "F") ": " (message)
+          line-end))
+  :modes (enh-ruby-mode))
