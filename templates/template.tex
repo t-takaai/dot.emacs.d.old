@@ -6,48 +6,22 @@
 %\usepackage{multicol}
 \usepackage{eclbkbox}
 
-%%%■ヘッダの選択〜
-%□\pagestyle, \thispagestyle の引数として
-	\pagestyle{textheadings}%			日付と章，§，ページ
-	%\pagestyle{empty}%					ヘッダなし
-	%\pagestyle{onlytimeheadings}%		日付のみ
-	%\pagestyle{onlypageheadings}%		ページのみ
-	%\pagestyle{timepageheadings}%		日付とページ
-%□ならびに，引数付きのヘッダコマンドとして
-	%\customstylewithpage{引数}%		日付と引数，ページ
-	%\customstyle{関数の基礎　テキスト}%				日付と引数
+\pagestyle{textheadings}%
 
-	%%%〜ヘッダの選択■
-
-%%%■用紙サイズ・テキストレベル・印刷形式の選択〜
-\用紙サイズ{A4}%	(B5: Ｂ５o紙, A4: Ａ４用紙)
-
-\textレベル{MeBio}%	(ALL, RT, RH, RM, RL, 3H, 3M, 3L, LM, BB, RULE, BR)
-
+\用紙サイズ{A4}%
+\textレベル{MeBio}%
 \印刷形式{ss}%
-		%(s: 生徒用テキスト)	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		%(t: 講師テキスト)		%% この指定によって，								 %%
-		%(ss: 生徒用総集編)		%% \border		…改ページの制御					 %%
-		%(ts: 講師用総集編)		%% \masking{}	…[解説], [解答]					 %%
-								%% \answer{}	…答を等しい幅の空白に置換(\phantom) %%
-					            %% が制御される．									 %%
-								%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%〜用紙サイズ・テキストレベル・印刷形式の選択■
 
 \def\texttitle{第 回 復習テスト}
 
 \begin{document}
 
-%%%■表紙の作成〜
 \公式testcover{タイトル}{第 回 復習テスト (T.Takaai)}{40}{}{}
-		%#1: テキスト名
-		%#2: version (Spring, Summer, Autumn, Winter, Last)
-		%			 (basic, middle, high level, practical, applied)
-		%#3: 筆者名
-%%%〜表紙の作成■
-
 
 \everymath{\displaystyle}
+\hidemdftitle
+
+
 
 
 \end{document}

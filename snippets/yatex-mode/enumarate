@@ -2,8 +2,7 @@
 # name: \begin{enumerate}...\end{enumerate}
 # key: enum
 # --
-
 \begin{enumerate}
  \item $0
  \item 
-\end{enumarate}
+\end{enumerate}

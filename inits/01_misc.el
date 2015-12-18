@@ -71,33 +71,43 @@
 
    ;; tauon で実行中の場合
    ((string-match "^tauon\\(\\..+\\)*$" system-name)
-     (create-fontset-from-ascii-font "Menlo-18:weight=normal:slant=normal" nil "menlokakugo")
-     (set-fontset-font "fontset-menlokakugo" 'unicode (font-spec :family "Hiragino Kaku Gothic ProN" ) nil 'append)
-     (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
-     (setq face-font-rescale-alist '((".*Hiragino.*" . 1.2) (".*Menlo.*" . 1.0)))
+     ;; (create-fontset-from-ascii-font "Menlo-18:weight=normal:slant=normal" nil "menlokakugo")
+     ;; (set-fontset-font "fontset-menlokakugo" 'unicode (font-spec :family "Hiragino Kaku Gothic ProN" ) nil 'append)
+     ;; (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
+     ;; (setq face-font-rescale-alist '((".*Hiragino.*" . 1.2) (".*Menlo.*" . 1.0)))
 
-     ;; Ricty フォントの利用
+     ;; Ricty フォント
      (create-fontset-from-ascii-font "Ricty-18:weight=normal:slant=normal" nil "ricty")
      (set-fontset-font "fontset-ricty"
-		       'unicode
-		       (font-spec :family "Ricty" :size 18)
-		       nil
-		       'append)
+        	       'unicode
+        	       (font-spec :family "Ricty" :size 18)
+        	       nil
+        	       'append)
      (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
+
+     ;; Source Han Code JP
+
+    ;; (create-fontset-from-ascii-font "Source Han Code JP-18:weight=light:slant=normal" nil "hancode")
+    ;; (set-fontset-font "fontset-hancode" 'unicode (font-spec :family "Source Han Code JP Light" :size 18) nil 'append)
+    ;; (add-to-list 'default-frame-alist '(font . "fontset-hancode"))
+
+    ;; (create-fontset-from-ascii-font "Source Han Code JP-16:weight=normal:slant=normal" nil "hancode")
+    ;; (set-fontset-font "fontset-hancode" 'unicode (font-spec :family "Source Han Code JP Normal" :size 16) nil 'append)
+    ;; (add-to-list 'default-frame-alist '(font . "fontset-hancode"))
 
      ;; フレーム位置設定(ウィンドウ） 
      (setq default-frame-alist
 	   (append
 	    '((top . 22)    ; フレームの Y 位置(ピクセル数)
 	      (left . 0)    ; フレームの X 位置(ピクセル数)
-	      (width . 116)    ; フレーム幅(文字数)
+	      (width . 120)    ; フレーム幅(文字数)
 	      (height . 81)   ; フレーム高(文字数)
 	      ) default-frame-alist))
      (setq initial-frame-alist
 	   (append
 	    '((top . 22)    ; フレームの Y 位置(ピクセル数)
 	      (left . 0)    ; フレームの X 位置(ピクセル数)
-	      (width . 116)    ; フレーム幅(文字数)
+	      (width . 120)    ; フレーム幅(文字数)
 	      (height . 81)   ; フレーム高(文字数)
 	      ) initial-frame-alist)))
 
