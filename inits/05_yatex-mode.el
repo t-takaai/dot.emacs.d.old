@@ -212,7 +212,7 @@
 (add-hook 'yatex-mode-hook
           (lambda ()
             (local-set-key (kbd "C-c C-c") 'mdf-typeset-and-preview)
-            (local-set-key (kbd "M-SPC") "$")
+            (local-set-key (kbd "M-=") "$")
             (local-set-key (kbd "C-c C-f") 'mb-find-mdffile-at-cursor)
 ;            (local-set-key (kbd "C-c C-r") 'mdf-typeset-and-preview-region)
 	    ))

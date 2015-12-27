@@ -35,17 +35,25 @@
 
 (require 'auto-complete)
 (require 'auto-complete-config)
-(global-auto-complete-mode t)
+(ac-config-default)
+;; (global-auto-complete-mode t)
 (define-key ac-completing-map (kbd "TAB") 'ac-complete) ;;TABで補完を完了する
+
+(add-to-list 'ac-modes 'text-mode)         ;; text-modeでも自動的に有効にする
+(add-to-list 'ac-modes 'fundamental-mode)  ;; fundamental-mode
+(add-to-list 'ac-modes 'org-mode)
+(add-to-list 'ac-modes 'yatex-mode)
 
 ;; C-n / C-p で選択
 ;; (define-key ac-completing-map (kbd "C-n") 'ac-next)
 ;; (define-key ac-completing-map (kbd "C-p") 'ac-previous)
 
-(setq ac-use-menu-map t)
+(setq ac-use-menu-map t) ;; 補完メニュー表示時にC-n/C-pで補完候補選択
+(setq ac-use-fuzzy t)          ;; 曖昧マッチ
+
 ;; デフォルトで設定済み
-(define-key ac-menu-map "\C-n" 'ac-next)
-(define-key ac-menu-map "\C-p" 'ac-previous)
+;; (define-key ac-menu-map "\C-n" 'ac-next)
+;; (define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;(setq ac-use-menu-map t) ;; C-n / C-p で選択
 (setq ac-auto-show-menu 0.3) ;; 候補が出るまでの時間 default 0.8
@@ -210,33 +218,34 @@
 
 
 ;; auto-complete-mode for latex light 
-(require 'auto-complete-latex-light)
-(setq ac-ll-dict-directory "~/.emacs.d/elisp/ac-ll-dict/")
-(add-to-list 'ac-modes 'latex-mode)
-(add-hook 'latex-mode-hook
-	  (lambda ()
-	    ;; Set the ac-sources you like.
-	    (setq ac-sources
-		  '(ac-source-filename
-		    ac-source-latex-dictionary
-		    ac-source-latex-commands-in-same-mode-buffers
-		    ac-source-abbrev
-		    ac-source-dictionary
-		    ac-source-yasnippet))))
+;; (require 'auto-complete-latex-light)
+;; (setq ac-ll-dict-directory "~/.emacs.d/elisp/ac-ll-dict/")
+;; (add-to-list 'ac-modes 'latex-mode)
+;; (add-hook 'latex-mode-hook
+;; 	  (lambda ()
+;; 	    ;; Set the ac-sources you like.
+;; 	    (setq ac-sources
+;; 		  '(ac-source-filename
+;; 		    ac-source-latex-dictionary
+;; 		    ac-source-latex-commands-in-same-mode-buffers
+;; 		    ac-source-abbrev
+;; 		    ac-source-dictionary
+;; 		    ac-source-yasnippet))))
+
 ; for YaTeX
-(when (require 'auto-complete-latex-light nil t)
-  (setq ac-l-dict-directory "~/.emacs.d/elisp/ac-ll-dict/")
-  (add-to-list 'ac-modes 'yatex-mode)
-  (add-hook 'yatex-mode-hook
-	    (lambda ()
-	      ;; Set the ac-sources you like.
-	      (setq ac-sources
-		    '(ac-source-filename
-		      ac-source-latex-dictionary
-		      ac-source-latex-commands-in-same-mode-buffers
-		      ac-source-abbrev
-		      ac-source-dictionary
-		      ac-source-yasnippet)))))
+;; (when (require 'auto-complete-latex-light nil t)
+;;   (setq ac-l-dict-directory "~/.emacs.d/elisp/ac-ll-dict/")
+;;   (add-to-list 'ac-modes 'yatex-mode)
+;;   (add-hook 'yatex-mode-hook
+;; 	    (lambda ()
+;; 	      ;; Set the ac-sources you like.
+;; 	      (setq ac-sources
+;; 		    '(ac-source-filename
+;; 		      ac-source-latex-dictionary
+;; 		      ac-source-latex-commands-in-same-mode-buffers
+;; 		      ac-source-abbrev
+;; 		      ac-source-dictionary
+;; 		      ac-source-yasnippet)))))
 
 
 
